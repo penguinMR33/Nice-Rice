@@ -401,6 +401,41 @@ section {
   gap: 4px;
 }
 
+/* 注意事項 */
+.warning-box {
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+  background-color: #FAF0ED;
+  border: 2px solid #E6C5BC;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  font-size: 13px;
+  color: #7D5247;
+}
+
+.warning-box h4 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #A34E36;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.warning-box ul {
+  list-style-position: inside;
+  padding-left: 4px;
+}
+
+.warning-box li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.warning-box li:last-child {
+  margin-bottom: 0;
+}
+
 /* フッター */
 footer {
   text-align: center;
