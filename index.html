@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>実家のお米お裾分け🌾 | ほの香</title>
+  <meta name="description" content="実家でていねいに育てた美味しいコシヒカリ。友人・知人のみんなにお裾分けします！">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo">
+      <span>🌾</span> ほの香のお米お裾分け
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    
+    <!-- ヒーロー -->
+    <section class="hero">
+      <h1 class="hero-title">実家のお米、<span>お裾分け</span>するよ！</h1>
+      <p class="hero-subtitle">自然豊かな山あいで育てた美味しいコシヒカリだよ。欲しい人は教えてね！</p>
+      
+      <div class="hero-img-container">
+        <img src="images/hero.png" alt="おいしいお米のイメージ">
+      </div>
+    </section>
+
+    <!-- こだわり紹介 (About) -->
+    <section>
+      <div class="about-card">
+        <h2 class="section-title">お米のこと</h2>
+        <p class="about-text">
+          実家で豊かな雪解け水を使って、農薬をできるだけ減らしてていねいに育てたコシヒカリです。
+          炊きあがりはツヤツヤで、もっちり甘みがあるのが自慢！冷めても美味しいので、お弁当やおにぎりにもぴったりだよ。
+        </p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <span class="feature-emoji">💧</span>
+            <div>
+              <h3 class="feature-title">きれいな水で育ったよ</h3>
+              <p class="feature-desc">山からの冷たくてきれいな雪解け水で育てました。</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-emoji">🍃</span>
+            <div>
+              <h3 class="feature-title">体にやさしい減農薬</h3>
+              <p class="feature-desc">なるべく農薬を減らして、安心して食べられるようにしています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 注文入力 & シミュレーター統合ボックス -->
+    <section id="order-section">
+      <h2 class="section-title">ほしい数量を選ぶ</h2>
+      
+      <div class="order-box">
+        <!-- お米の情報 -->
+        <div class="product-summary">
+          <span class="product-tag">コシヒカリ 100%</span>
+          <h3 class="product-name">特別栽培米 コシヒカリ (5kg)</h3>
+          <div class="product-price">¥2,500 <span>/ 1袋 (5kg)</span></div>
+        </div>
+
+        <form id="order-form">
+          <!-- 数量選択 -->
+          <div class="form-group">
+            <label class="form-label">数量 (5kgの袋数)</label>
+            <div class="counter-container">
+              <button type="button" class="btn-counter" id="btn-minus" aria-label="数量を減らす">−</button>
+              <span class="counter-value" id="counter-val">1</span>
+              <button type="button" class="btn-counter" id="btn-plus" aria-label="数量を増やす">+</button>
+            </div>
+          </div>
+
+          <!-- 受け渡し方法 -->
+          <div class="form-group">
+            <label class="form-label">受け渡し方法</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="delivery" value="手渡し" checked>
+                <div class="radio-card">
+                  手渡し
+                  <span class="radio-desc">送料 0円</span>
+                </div>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="delivery" value="郵送">
+                <div class="radio-card">
+                  郵送する
+                  <span class="radio-desc">送料 +800円</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- お名前 -->
+          <div class="form-group">
+            <label class="form-label" for="user-name">お名前 (フルネーム)</label>
+            <input type="text" id="user-name" class="form-control" placeholder="山田 太郎" required>
+          </div>
+
+          <!-- 備考・メッセージ -->
+          <div class="form-group">
+            <label class="form-label" for="user-message">メッセージ・メモ (あれば)</label>
+            <textarea id="user-message" class="form-control" rows="2" placeholder="受け渡し方法の相談や、何かあれば書いてね！"></textarea>
+          </div>
+
+          <!-- 金額合計 -->
+          <div class="total-box">
+            <span class="total-title">合計金額</span>
+            <span class="total-amount" id="total-amount">¥2,500</span>
+          </div>
+
+          <!-- コピー実行ボタン -->
+          <button type="submit" class="btn-primary">
+            📋 注文メッセージをコピーする
+          </button>
+        </form>
+      </div>
+
+      <!-- 保管アドバイス -->
+      <div class="storage-box">
+        <h4>💡 美味しく食べるための保管のコツ</h4>
+        <p>お米は高温と湿気に弱いよ。できればジップロックやペットボトルなどの密閉容器に移し替えて、冷蔵庫の野菜室で保管するのが一番おすすめです！</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>ほの香のお米お裾分けサイト &copy; 2026</p>
+  </footer>
+
+  <!-- 通知トースト -->
+  <div class="toast" id="toast">
+    <span>✅</span> <span id="toast-text">コピーしたよ！</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
