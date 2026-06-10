@@ -60,8 +60,13 @@ orderForm.addEventListener('submit', (e) => {
   const productPrice = quantity * UNIT_PRICE;
   const totalPrice = productPrice + shipping;
 
+  // 注文日時の生成
+  const now = new Date();
+  const timestamp = `${now.getFullYear()}/${String(now.getMonth() + 1).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
   // コピー用テキストの組み立て
   let orderText = `お米（コシヒカリ）注文するね！🌾\n\n`;
+  orderText += `・注文日時：${timestamp}\n`;
   orderText += `・お名前：${name}\n`;
   orderText += `・数量：${quantity}袋 (${quantity * 5}kg)\n`;
   orderText += `・受け渡し：${deliveryMethod}\n`;
